@@ -1,0 +1,21 @@
+.input-label {
+  /* position: absolute; */
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: #9b9b9b;
+}
+
+.input {
+  font-family: monospace;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid #9b9b9b;
+  outline: 0;
+  font-size: 1.3rem;
+  color: white;
+  padding: 7px 0;
+  background: white;
+  transition: border-color 0.2s;
+}

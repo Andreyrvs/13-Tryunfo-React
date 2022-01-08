@@ -44,11 +44,14 @@ class Form extends Component {
           data-testid="image-input"
         />
 
-        <select data-testid="rare-input">
-          <option>normal</option>
-          <option>raro</option>
-          <option>muito raro</option>
-        </select>
+        <div>
+          Raridade
+          <select data-testid="rare-input" placeholder="Placehalder">
+            <option>normal</option>
+            <option>raro</option>
+            <option>muito raro</option>
+          </select>
+        </div>
 
         <Input
           type="checkbox"

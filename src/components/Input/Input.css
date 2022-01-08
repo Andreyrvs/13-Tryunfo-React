@@ -1,8 +1,8 @@
 .input {
   background: white;
   border: 0;
-  border-bottom: 2px solid #9b9b9b;
-  color: black;
+  border-bottom: 2px solid #848b98;
+  color: #3d495c;
   font-family: monospace;
   font-size: 1.3rem;
   outline: 0;
@@ -12,7 +12,7 @@
 }
 
 .label {
-  color: #9b9b9b;
+  color: #3d495c;
   display: block;
   font-size: 1rem;
   top: 0;
@@ -20,9 +20,9 @@
 }
 
 .input:focus {
-  padding-bottom: 6px;
-  font-weight: 700;
-  border-width: 3px;
   border-image: linear-gradient(to right, #11998e, #38ef7d);
   border-image-slice: 1;
+  border-width: 3px;
+  font-weight: 700;
+  padding-bottom: 6px;
 }

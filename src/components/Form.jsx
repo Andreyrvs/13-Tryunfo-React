@@ -75,6 +75,8 @@ class Form extends Component {
           <Select
             datatest="rare-input"
             id="input-select"
+            value={ cardRare }
+            handleChange={ onInputChange }
           />
           <Checkbox
             datatest="trunfo-input"

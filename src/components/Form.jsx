@@ -69,6 +69,8 @@ class Form extends Component {
             datatest="image-input"
             id="input-image"
             label="Imagem"
+            value={ cardImage }
+            handleChange={ onInputChange }
           />
           <Select
             datatest="rare-input"

@@ -8,8 +8,8 @@ import Checkbox from './Checkbox/Checkbox';
 import Button from './Button/Button';
 
 class Form extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.handleChange = this.handleChange.bind(this);
 

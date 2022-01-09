@@ -11,9 +11,14 @@ class Form extends Component {
   constructor() {
     super();
 
-    this.state = {
-      isSaveButtonDisabled: false,
-    };
+    this.handleChange = this.handleChange.bind(this);
+
+    // this.state = {
+    // };
+  }
+
+  handleChange = () => {
+    console.log('Clicou');
   }
 
   render() {
@@ -26,7 +31,7 @@ class Form extends Component {
       cardImage,
       cardRare,
       cardTrunfo,
-      hasTrunfo,
+      // hasTrunfo,
       isSaveButtonDisabled,
       onInputChange,
       onSaveButtonClick,
@@ -60,7 +65,7 @@ class Form extends Component {
           <Input
             datatest="attr2-input"
             id="input-attr02"
-            handleChange={ onInputChange  }
+            handleChange={ onInputChange }
             type="number"
             label="Attr02"
             value={ cardAttr2 }
@@ -68,7 +73,7 @@ class Form extends Component {
           <Input
             datatest="attr3-input"
             id="input-attr03"
-            handleChange={ onInputChange  }
+            handleChange={ onInputChange }
             type="number"
             label="Attr03"
             value={ cardAttr3 }

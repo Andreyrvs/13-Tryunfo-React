@@ -8,6 +8,14 @@ import Checkbox from './Checkbox/Checkbox';
 import Button from './Button/Button';
 
 class Form extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      isSaveButtonDisabled: false,
+    };
+  }
+
   render() {
     const {
       cardName,
@@ -89,6 +97,8 @@ class Form extends Component {
             datatest="save-button"
             id="button-save"
             type="button"
+            handleChange={ onSaveButtonClick }
+            value={ isSaveButtonDisabled }
           />
         </form>
       </div>
@@ -96,8 +106,19 @@ class Form extends Component {
   }
 }
 
-Form.propTyes = {
+Form.propTypes = {
   cardName: PropTypes.string,
+  cardDescription: PropTypes.string,
+  cardAttr1: PropTypes.string,
+  cardAttr2: PropTypes.string,
+  cardAttr3: PropTypes.string,
+  cardImage: PropTypes.string,
+  cardRare: PropTypes.string,
+  cardTrunfo: PropTypes.bool,
+  hasTrunfo: PropTypes.bool,
+  isSaveButtonDisabled: PropTypes.bool,
+  onInputChange: PropTypes.func,
+  onSaveButtonClick: PropTypes.func,
 }.isRequire;
 
 export default Form;

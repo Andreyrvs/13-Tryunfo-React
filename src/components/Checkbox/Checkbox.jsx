@@ -21,7 +21,7 @@ class Checkbox extends Component {
 
 Checkbox.propTypes = {
   datatest: PropTypes.string,
-  value: PropTypes.string,
+  value: PropTypes.bool,
   label: PropTypes.string,
   type: PropTypes.string,
   elementId: PropTypes.string,

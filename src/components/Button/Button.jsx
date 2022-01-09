@@ -9,7 +9,7 @@ class Button extends Component {
         data-testid={ datatest }
         id={ elementId }
         onChange={ handleChange }
-        value={ value }
+        disabled={ value }
         type={ type === 'button' ? 'button' : 'submit' }
       >
         Salvar
@@ -20,7 +20,7 @@ class Button extends Component {
 
 Button.propTypes = {
   datatest: PropTypes.string,
-  value: PropTypes.string,
+  value: PropTypes.bool,
   type: PropTypes.string,
   elementId: PropTypes.string,
   handleChange: PropTypes.func,

@@ -44,7 +44,7 @@ class Form extends Component {
           data-testid="image-input"
         />
 
-        <div>
+        <div className="select-container">
           Raridade
           <select data-testid="rare-input" placeholder="Placehalder">
             <option>normal</option>

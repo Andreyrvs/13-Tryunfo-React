@@ -2,7 +2,16 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 class Card extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      trunfo: false,
+    };
+  }
+
   render() {
+    const { trunfo } = this.state;
+
     const {
       cardAttr1,
       cardAttr2,
@@ -23,7 +32,7 @@ class Card extends Component {
           src={ cardImage }
         />
         <p data-testid="description-card">
-        { cardDescription }
+          { cardDescription }
         </p>
         <p data-testid="attr1-card">
           { cardAttr1 }
@@ -36,6 +45,12 @@ class Card extends Component {
         </p>
         <p data-testid="rare-card">
           { cardRare }
+        </p>
+        <p
+          data-testid="trunfo-card"
+          onChange={ () => { this.setState({ trunfo: true }); } }
+        >
+          { cardTrunfo ? <p>Super Trunfo</p> : trunfo }
         </p>
       </div>
     );

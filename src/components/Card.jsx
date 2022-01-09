@@ -22,6 +22,9 @@ class Card extends Component {
           data-testid="image-card"
           src={ cardImage }
         />
+        <p data-testid="description-card">
+        { cardDescription }
+        </p>
       </div>
     );
   }

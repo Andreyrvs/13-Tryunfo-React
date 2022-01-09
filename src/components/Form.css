@@ -1,11 +1,6 @@
 form {
+  align-items: baseline;
   display: flex;
   flex-direction: column;
   margin: 20px;
-}
-
-form > button {
-  display: flex;
-  justify-content: center;
-  width: 10%;
 }

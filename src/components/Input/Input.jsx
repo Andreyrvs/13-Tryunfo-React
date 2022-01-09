@@ -4,10 +4,10 @@ import './Input.css';
 
 class Input extends Component {
   render() {
-    const { handleChange, datatest, type, elementId, value } = this.props;
+    const { handleChange, datatest, type, elementId, value, label } = this.props;
     return (
       <label htmlFor={ elementId }>
-        { elementId }
+        { label }
         <input
           data-testid={ datatest }
           id={ elementId }
@@ -23,6 +23,7 @@ class Input extends Component {
 Input.propTypes = {
   datatest: PropTypes.string,
   value: PropTypes.string,
+  label: PropTypes.string,
   type: PropTypes.string,
   elementId: PropTypes.string,
   handleChange: PropTypes.func,

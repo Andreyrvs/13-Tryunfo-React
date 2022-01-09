@@ -1,9 +1,10 @@
-import React from 'react';
-import Input from '../Input/Input';
-import TextArea from '../TextArea/TextArea';
+import React, { Component } from 'react';
+import Input from './Input/Input';
+import Select from './Select/Select';
+import TextArea from './TextArea/TextArea';
 import './Form.css';
 
-class Form extends React.Component {
+class Form extends Component {
   render() {
     return (
       <div>
@@ -39,6 +40,9 @@ class Form extends React.Component {
           <Input
             datatest="image-input"
             id="image"
+          />
+          <Select
+            datatest="rare-input"
           />
         </form>
       </div>

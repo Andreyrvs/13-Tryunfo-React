@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-class TextArea extends React.Component {
+class TextArea extends Component {
   render() {
     const { handleChange, datatest, elementId, value } = this.props;
     return (

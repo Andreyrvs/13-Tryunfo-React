@@ -44,9 +44,10 @@ class Form extends Component {
           <Input
             datatest="attr1-input"
             id="input-attr01"
-            handleChange={ () => { } }
+            handleChange={ onInputChange }
             type="number"
             label="Attr01"
+            value={ cardAttr1 }
           />
           <Input
             datatest="attr2-input"

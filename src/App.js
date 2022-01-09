@@ -24,8 +24,12 @@ class App extends Component {
     };
   }
 
-  onInputChange = () => {
-    console.log('onInputChange');
+  onInputChange = (event) => {
+    const { name, value } = event.target;
+
+    this.setState({
+      [name]: value,
+    });
   }
 
   onSaveButtonClick = () => {

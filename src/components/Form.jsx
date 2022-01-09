@@ -32,6 +32,7 @@ class Form extends Component {
             handleChange={ onInputChange }
             id="input-name"
             label="Nome"
+            name={ cardName }
             type="text"
             value={ cardName }
           />
@@ -40,6 +41,7 @@ class Form extends Component {
             handleChange={ onInputChange }
             id="input-description"
             label="Descrição"
+            name={ cardDescription }
             value={ cardDescription }
           />
           <Input
@@ -47,6 +49,7 @@ class Form extends Component {
             handleChange={ onInputChange }
             id="input-attr01"
             label="Attr01"
+            name={ cardAttr1 }
             type="number"
             value={ cardAttr1 }
           />
@@ -55,6 +58,7 @@ class Form extends Component {
             handleChange={ onInputChange }
             id="input-attr02"
             label="Attr02"
+            name={ cardAttr2 }
             type="number"
             value={ cardAttr2 }
           />
@@ -63,6 +67,7 @@ class Form extends Component {
             handleChange={ onInputChange }
             id="input-attr03"
             label="Attr03"
+            name={ cardAttr3 }
             type="number"
             value={ cardAttr3 }
           />
@@ -71,18 +76,22 @@ class Form extends Component {
             handleChange={ onInputChange }
             id="input-image"
             label="Imagem"
+            name={ cardImage }
             value={ cardImage }
           />
           <Select
             datatest="rare-input"
             handleChange={ onInputChange }
             id="input-select"
+            label="Raridade"
+            name={ cardRare }
             value={ cardRare }
           />
           <Checkbox
             datatest="trunfo-input"
             handleChange={ onInputChange }
             label="Super Trybe Trunfo"
+            name={ cardTrunfo }
             type="checkbox"
             value={ cardTrunfo }
           />
@@ -90,6 +99,7 @@ class Form extends Component {
             datatest="save-button"
             handleChange={ onSaveButtonClick }
             id="button-save"
+            name={ isSaveButtonDisabled }
             type="button"
             value={ isSaveButtonDisabled }
           />

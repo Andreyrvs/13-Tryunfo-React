@@ -10,7 +10,7 @@ class Form extends React.Component {
         <form>
           <Input
             datatest="name-input"
-            id="name"
+            id="nome"
             onChange={ () => { } }
             type="text"
           />
@@ -35,6 +35,10 @@ class Form extends React.Component {
             id="attr03"
             onChange={ () => { } }
             type="number"
+          />
+          <Input
+            datatest="image-input"
+            id="image"
           />
         </form>
       </div>

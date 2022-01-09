@@ -3,3 +3,9 @@ form {
   flex-direction: column;
   margin: 20px;
 }
+
+form > button {
+  display: flex;
+  justify-content: center;
+  width: 10%;
+}

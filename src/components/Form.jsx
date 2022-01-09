@@ -3,6 +3,7 @@ import Input from './Input/Input';
 import Select from './Select/Select';
 import TextArea from './TextArea/TextArea';
 import './Form.css';
+import Checkbox from './Checkbox/Checkbox';
 
 class Form extends Component {
   render() {
@@ -43,6 +44,9 @@ class Form extends Component {
           />
           <Select
             datatest="rare-input"
+          />
+          <Checkbox
+            datatest="trunfo-input"
           />
         </form>
       </div>

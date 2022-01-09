@@ -17,6 +17,11 @@ class Card extends Component {
     return (
       <div data-testid="name-card">
         { cardName }
+        <img
+          alt={ cardName }
+          data-testid="image-card"
+          src={ cardImage }
+        />
       </div>
     );
   }

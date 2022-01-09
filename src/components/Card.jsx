@@ -31,7 +31,7 @@ class Card extends Component {
         <p data-testid="attr2-card">
           { cardAttr2 }
         </p>
-        <p data-testid="cardAttr3">
+        <p data-testid="attr3-card">
           { cardAttr3 }
         </p>
       </div>

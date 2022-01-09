@@ -1,22 +1,38 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import './Form.css';
 import Input from './Input/Input';
 import Select from './Select/Select';
 import TextArea from './TextArea/TextArea';
-import './Form.css';
 import Checkbox from './Checkbox/Checkbox';
 import Button from './Button/Button';
 
 class Form extends Component {
   render() {
+    const {
+      cardName,
+      cardDescription,
+      cardAttr1,
+      cardAttr2,
+      cardAttr3,
+      cardImage,
+      cardRare,
+      cardTrunfo,
+      hasTrunfo,
+      isSaveButtonDisabled,
+      onInputChange,
+      onSaveButtonClick,
+    } = this.props;
     return (
       <div>
         <form>
           <Input
             datatest="name-input"
             id="input-name"
-            onChange={ () => { } }
+            handleChange={ onInputChange }
             type="text"
             label="Nome"
+            value={ cardName }
           />
           <TextArea
             datatest="description-input"
@@ -26,21 +42,21 @@ class Form extends Component {
           <Input
             datatest="attr1-input"
             id="input-attr01"
-            onChange={ () => { } }
+            handleChange={ () => { } }
             type="number"
             label="Attr01"
           />
           <Input
             datatest="attr2-input"
             id="input-attr02"
-            onChange={ () => { } }
+            handleChange={ () => { } }
             type="number"
             label="Attr02"
           />
           <Input
             datatest="attr3-input"
             id="input-attr03"
-            onChange={ () => { } }
+            handleChange={ () => { } }
             type="number"
             label="Attr03"
           />
@@ -68,5 +84,9 @@ class Form extends Component {
     );
   }
 }
+
+Form.propTyes = {
+  cardName: PropTypes.string,
+}.isRequire;
 
 export default Form;

@@ -1,11 +1,11 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class Checkbox extends Component {
   render() {
-    const { handleChange, elementId, type, value, datatest } = this.props
+    const { handleChange, elementId, type, value, datatest } = this.props;
     return (
-      <labe>
+      <label htmlFor={ elementId }>
         <input
           data-testid={ datatest }
           type={ type }
@@ -13,8 +13,8 @@ class Checkbox extends Component {
           id={ elementId }
           onChange={ handleChange }
         />
-      </labe>
-    )
+      </label>
+    );
   }
 }
 
@@ -26,4 +26,4 @@ Checkbox.propTypes = {
   handleChange: PropTypes.func,
 }.isRequired;
 
-export default Checkbox
+export default Checkbox;

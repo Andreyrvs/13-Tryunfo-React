@@ -8,9 +8,26 @@ class App extends Component {
     super();
     this.handleChange = this.handleChange.bind(this);
 
-    this.state = {
-      cardTrunfo: false, 
-    };
+    // this.state = {
+    //   cardAttr1: '',
+    //   cardAttr2: '',
+    //   cardAttr3: '',
+    //   cardDescription: '',
+    //   cardImage: '',
+    //   cardName: '',
+    //   cardRare: '',
+    //   cardTrunfo: false,
+    //   hasTrunfo: false,
+    //   isSaveButtonDisabled: true,
+    // };
+  }
+
+  onInputChange = () => {
+    console.log('onInputChange');
+  }
+
+  onSaveButtonClick = () => {
+    console.log('onSaveButtonClick');
   }
 
   handleChange = () => {

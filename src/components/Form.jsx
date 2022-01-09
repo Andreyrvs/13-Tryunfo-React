@@ -8,19 +8,6 @@ import Select from './Select/Select';
 import TextArea from './TextArea/TextArea';
 
 class Form extends Component {
-  constructor(props) {
-    super(props);
-
-    this.handleChange = this.handleChange.bind(this);
-
-    // this.state = {
-    // };
-  }
-
-  handleChange = () => {
-    console.log('Clicou');
-  }
-
   render() {
     const {
       cardAttr1,

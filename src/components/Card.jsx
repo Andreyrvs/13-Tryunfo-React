@@ -1,17 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import Checkbox from './Checkbox/Checkbox';
 
 class Card extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      trunfo: false,
-    };
-  }
-
   render() {
-    const { trunfo } = this.state;
-
     const {
       cardAttr1,
       cardAttr2,
@@ -46,12 +38,7 @@ class Card extends Component {
         <p data-testid="rare-card">
           { cardRare }
         </p>
-        <p
-          data-testid="trunfo-card"
-          onChange={ () => { this.setState({ trunfo: true }); } }
-        >
-          { cardTrunfo ? <p>Super Trunfo</p> : trunfo }
-        </p>
+        {cardTrunfo && <p data-testid="trunfo-card">Super Trunfo</p>}
       </div>
     );
   }

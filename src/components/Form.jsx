@@ -38,6 +38,8 @@ class Form extends Component {
             datatest="description-input"
             id="input-description"
             label="Descrição"
+            value={ cardDescription }
+            handleChange={ onInputChange }
           />
           <Input
             datatest="attr1-input"

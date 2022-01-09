@@ -18,6 +18,12 @@ class Form extends React.Component {
             datatest="description-input"
             id="description"
           />
+          <Input
+            datatest="attr1-input"
+            id="attr01"
+            onChange={ () => { } }
+            type="number"
+          />
         </form>
       </div>
     );

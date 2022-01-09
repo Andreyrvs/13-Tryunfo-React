@@ -9,7 +9,7 @@ class Checkbox extends Component {
         <input
           data-testid={ datatest }
           type={ type }
-          value={ value }
+          checked={ value }
           id={ elementId }
           onChange={ handleChange }
         />

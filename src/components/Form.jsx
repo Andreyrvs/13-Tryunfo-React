@@ -82,6 +82,8 @@ class Form extends Component {
             datatest="trunfo-input"
             type="checkbox"
             label="Super Trybe Trunfo"
+            value={ cardTrunfo }
+            handleChange={ onInputChange }
           />
           <Button
             datatest="save-button"

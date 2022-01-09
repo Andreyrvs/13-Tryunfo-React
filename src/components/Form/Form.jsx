@@ -30,6 +30,12 @@ class Form extends React.Component {
             onChange={ () => { } }
             type="number"
           />
+          <Input
+            datatest="attr3-input"
+            id="attr03"
+            onChange={ () => { } }
+            type="number"
+          />
         </form>
       </div>
     );

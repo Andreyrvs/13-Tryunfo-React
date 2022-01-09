@@ -22,11 +22,11 @@ class Input extends Component {
 
 Input.propTypes = {
   datatest: PropTypes.string,
-  value: PropTypes.string,
-  label: PropTypes.string,
-  type: PropTypes.string,
   elementId: PropTypes.string,
   handleChange: PropTypes.func,
+  label: PropTypes.string,
+  type: PropTypes.string,
+  value: PropTypes.string,
 }.isRequired;
 
 export default Input;

@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 
 class Select extends Component {
   render() {
-    const { datatest, handleChange, value, elementId } = this.props;
+    const { datatest, elementId, handleChange, value } = this.props;
     return (
       <select
         data-testid={ datatest }
-        onChange={ handleChange }
         id={ elementId }
+        onChange={ handleChange }
         value={ value }
       >
         <option>normal</option>
@@ -20,10 +20,10 @@ class Select extends Component {
 }
 
 Select.propTypes = {
-  handleChange: PropTypes.func,
   datatest: PropTypes.string,
-  value: PropTypes.string,
   elementId: PropTypes.string,
+  handleChange: PropTypes.func,
+  value: PropTypes.string,
 }.isRequire;
 
 export default Select;

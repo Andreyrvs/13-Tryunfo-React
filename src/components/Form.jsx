@@ -25,6 +25,7 @@ class Form extends Component {
     } = this.props;
     return (
       <div>
+        <h1>Adicionar Nova Carta</h1>
         <form>
           <Input
             datatest="name-input"

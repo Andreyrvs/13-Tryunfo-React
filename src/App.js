@@ -7,19 +7,21 @@ class App extends Component {
   constructor() {
     super();
     this.handleChange = this.handleChange.bind(this);
+    this.onInputChange = this.onInputChange.bind(this);
+    this.onSaveButtonClick = this.onSaveButtonClick.bind(this);
 
-    // this.state = {
-    //   cardAttr1: '',
-    //   cardAttr2: '',
-    //   cardAttr3: '',
-    //   cardDescription: '',
-    //   cardImage: '',
-    //   cardName: '',
-    //   cardRare: '',
-    //   cardTrunfo: false,
-    //   hasTrunfo: false,
-    //   isSaveButtonDisabled: true,
-    // };
+    this.state = {
+      cardAttr1: '',
+      cardAttr2: '',
+      cardAttr3: '',
+      cardDescription: '',
+      cardImage: '',
+      cardName: '',
+      cardRare: '',
+      cardTrunfo: false,
+      hasTrunfo: false,
+      isSaveButtonDisabled: true,
+    };
   }
 
   onInputChange = () => {
@@ -36,8 +38,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <h1>Adicionar Nova Carta</h1>
+      <div className="super-trunfo-container">
         <Form />
         <Card />
       </div>

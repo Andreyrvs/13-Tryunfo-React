@@ -19,3 +19,7 @@ h1 {
   top: 122px;
   width: 355px;
 }
+
+.super-trunfo-container {
+  display: flex;
+}

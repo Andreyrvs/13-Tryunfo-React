@@ -14,47 +14,54 @@
 }
 
 .card {
-  align-items: center;
+
   /* box-shadow: inset 0px 0px 0px 10px white, inset 0px 0px 0px 20px #036B52; */
+  align-items: center;
   background: #fafafafa;
   border: 3px solid green;
   display: flex;
   flex-direction: column;
   height: 549px;
-  width: 368px;
-  top: 283px;
   left: 874px;
   position: absolute;
+  top: 283px;
+  width: 368px;
 }
 
 p {
+
   /* display: flex; */
+
   /* flex-direction: column; */
+
   /* font-size: 15px; */
   margin: 5px;
 }
 
 .card-name {
+
   /* color: white; */
   font-size: 28px;
   height: 36px;
   left: 169px;
+
   /* position: absolute; */
   top: 36px;
   width: 176px;
 }
 
 .card-image {
+
   /* position: absolute; */
-  width: 317px;
   height: 278px;
   left: 26px;
   top: 29px;
+  width: 317px;
 }
 
 .description {
+  font-family: monospace , sans-serif;
   font-size: 8px;
-  font-family: monospace, sans-serif;
   height: 147px;
   width: 317px;
 }

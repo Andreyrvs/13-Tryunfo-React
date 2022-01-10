@@ -22,3 +22,9 @@ h1 {
   flex-direction: row;
   margin: 40px;
 }
+
+.new-card {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 20px;
+}

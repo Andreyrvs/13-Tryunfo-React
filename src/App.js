@@ -25,14 +25,17 @@ class App extends Component {
 
   handleChange = ({ target }) => {
     const { name, value, type, checked } = target;
-    this.setState({
-      [name]: type === 'checkbox' ? checked : value,
-    },
-    this.handleSaveBtn);
-  }
+    this.setState(
+      {
+        [name]: type === 'checkbox' ? checked : value,
+      },
+      this.handleSaveBtn,
+    );
+  };
 
   handleSaveBtn = () => {
-    const { cardName,
+    const {
+      cardName,
       cardDescription,
       cardAttr1,
       cardAttr2,
@@ -43,32 +46,31 @@ class App extends Component {
     const emptyElement = cardName && cardDescription && cardImage !== '';
     const maxLimit = 210;
     const attrLimit = 90;
-    const some = Number(cardAttr1) + Number(cardAttr2) + Number(cardAttr3)
-
+    const some = Number(cardAttr1) + Number(cardAttr2) + Number(cardAttr3);
 
     if (
-       emptyElement
-       && Number(cardAttr1) <= attrLimit
-       && Number(cardAttr2) <= attrLimit
-       && Number(cardAttr3) <= attrLimit
-       && some <= maxLimit
-       && cardAttr1 >= 0
-       && cardAttr2 >= 0
-       && cardAttr3 >= 0
-      ) {
-        this.setState({
-          isSaveButtonDisabled: false
-        })
-      } else {
-        this.setState({
-          isSaveButtonDisabled: true
-        })
-      }
-  }
+      emptyElement
+      && Number(cardAttr1) <= attrLimit
+      && Number(cardAttr2) <= attrLimit
+      && Number(cardAttr3) <= attrLimit
+      && some <= maxLimit
+      && cardAttr1 >= 0
+      && cardAttr2 >= 0
+      && cardAttr3 >= 0
+    ) {
+      this.setState({
+        isSaveButtonDisabled: false,
+      });
+    } else {
+      this.setState({
+        isSaveButtonDisabled: true,
+      });
+    }
+  };
 
   onSaveButtonClick = () => {
     console.log('Clicou');
-  }
+  };
 
   render() {
     const {

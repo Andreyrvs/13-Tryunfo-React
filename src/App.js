@@ -18,14 +18,13 @@ class App extends Component {
       cardName: '',
       cardRare: '',
       cardTrunfo: false,
-      hasTrunfo: false,
-      isSaveButtonDisabled: true,
+      // hasTrunfo: false,
+      // isSaveButtonDisabled: true,
     };
   }
 
   handleInput = ({ target }) => {
     const { name, value, type, checked } = target;
-    
     this.setState({
       [name]: type === 'checkbox' ? checked : value,
     });
@@ -49,25 +48,25 @@ class App extends Component {
     return (
       <div className="super-trunfo-container">
         <Form
-        onInputChange={ this.handleInput }
-        cardAttr1={ cardAttr1 }
-        cardAttr2={ cardAttr2 }
-        cardAttr3={ cardAttr3}
-        cardDescription={ cardDescription }
-        cardImage={ cardImage }
-        cardName={ cardName }
-        cardRare={ cardRare }
-        cardTrunfo={ cardTrunfo}
+          onInputChange={ this.handleInput }
+          cardAttr1={ cardAttr1 }
+          cardAttr2={ cardAttr2 }
+          cardAttr3={ cardAttr3 }
+          cardDescription={ cardDescription }
+          cardImage={ cardImage }
+          cardName={ cardName }
+          cardRare={ cardRare }
+          cardTrunfo={ cardTrunfo }
         />
         <Card
-        cardAttr1={ cardAttr1 }
-        cardAttr2={ cardAttr2 }
-        cardAttr3={ cardAttr3}
-        cardDescription={ cardDescription }
-        cardImage={ cardImage }
-        cardName={ cardName }
-        cardRare={ cardRare }
-        cardTrunfo={ cardTrunfo}
+          cardAttr1={ cardAttr1 }
+          cardAttr2={ cardAttr2 }
+          cardAttr3={ cardAttr3 }
+          cardDescription={ cardDescription }
+          cardImage={ cardImage }
+          cardName={ cardName }
+          cardRare={ cardRare }
+          cardTrunfo={ cardTrunfo }
         />
       </div>
     );

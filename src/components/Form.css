@@ -2,20 +2,13 @@
   align-items: baseline;
   display: flex;
   flex-direction: column;
-  height: 1056px;
+  left: 200px;
   width: 690px;
 }
 
 .form-container > h1 {
   left: 131px;
-  position: absolute;
   top: 122px;
-}
-
-form {
-  left: 133px;
-  position: absolute;
-  top: 233px;
 }
 
 button {

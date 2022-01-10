@@ -18,7 +18,7 @@ class App extends Component {
       cardName: '',
       cardRare: 'normal',
       cardTrunfo: false,
-      hasTrunfo: false,
+      // hasTrunfo: false,
       isSaveButtonDisabled: true,
       cardSave: [],
     };
@@ -30,7 +30,7 @@ class App extends Component {
       {
         [name]: type === 'checkbox' ? checked : value,
       },
-      this.handleSaveBtn
+      this.handleSaveBtn,
     );
   };
 
@@ -50,14 +50,14 @@ class App extends Component {
     const some = Number(cardAttr1) + Number(cardAttr2) + Number(cardAttr3);
 
     if (
-      emptyElement &&
-      Number(cardAttr1) <= attrLimit &&
-      Number(cardAttr2) <= attrLimit &&
-      Number(cardAttr3) <= attrLimit &&
-      some <= maxLimit &&
-      cardAttr1 >= 0 &&
-      cardAttr2 >= 0 &&
-      cardAttr3 >= 0
+      emptyElement
+      && Number(cardAttr1) <= attrLimit
+      && Number(cardAttr2) <= attrLimit
+      && Number(cardAttr3) <= attrLimit
+      && some <= maxLimit
+      && cardAttr1 >= 0
+      && cardAttr2 >= 0
+      && cardAttr3 >= 0
     ) {
       this.setState({
         isSaveButtonDisabled: false,
@@ -129,44 +129,44 @@ class App extends Component {
       isSaveButtonDisabled,
     } = this.state;
     return (
-      <div>
-        <div className="super-trunfo-container">
+      <div className="super-trunfo-container">
+        <div className="form-preview-container">
           <Form
-            onInputChange={this.handleChange}
-            cardAttr1={cardAttr1}
-            cardAttr2={cardAttr2}
-            cardAttr3={cardAttr3}
-            cardDescription={cardDescription}
-            cardImage={cardImage}
-            cardName={cardName}
-            cardRare={cardRare}
-            cardTrunfo={cardTrunfo}
-            isSaveButtonDisabled={isSaveButtonDisabled}
-            onSaveButtonClick={this.onSaveButtonClick}
+            onInputChange={ this.handleChange }
+            cardAttr1={ cardAttr1 }
+            cardAttr2={ cardAttr2 }
+            cardAttr3={ cardAttr3 }
+            cardDescription={ cardDescription }
+            cardImage={ cardImage }
+            cardName={ cardName }
+            cardRare={ cardRare }
+            cardTrunfo={ cardTrunfo }
+            isSaveButtonDisabled={ isSaveButtonDisabled }
+            onSaveButtonClick={ this.onSaveButtonClick }
           />
           <Card
-            cardAttr1={cardAttr1}
-            cardAttr2={cardAttr2}
-            cardAttr3={cardAttr3}
-            cardDescription={cardDescription}
-            cardImage={cardImage}
-            cardName={cardName}
-            cardRare={cardRare}
-            cardTrunfo={cardTrunfo}
+            cardAttr1={ cardAttr1 }
+            cardAttr2={ cardAttr2 }
+            cardAttr3={ cardAttr3 }
+            cardDescription={ cardDescription }
+            cardImage={ cardImage }
+            cardName={ cardName }
+            cardRare={ cardRare }
+            cardTrunfo={ cardTrunfo }
           />
         </div>
-        <div className='new-card'>
+        <div className="new-card">
           {cardSave.map((card) => (
             <Card
-              key={card}
-              cardAttr1={card.cardAttr1}
-              cardAttr2={card.cardAttr2}
-              cardAttr3={card.cardAttr3}
-              cardDescription={card.cardDescription}
-              cardImage={card.cardImage}
-              cardName={card.cardName}
-              cardRare={card.cardRare}
-              cardTrunfo={card.cardTrunfo}
+              key={ card }
+              cardAttr1={ card.cardAttr1 }
+              cardAttr2={ card.cardAttr2 }
+              cardAttr3={ card.cardAttr3 }
+              cardDescription={ card.cardDescription }
+              cardImage={ card.cardImage }
+              cardName={ card.cardName }
+              cardRare={ card.cardRare }
+              cardTrunfo={ card.cardTrunfo }
             />
           ))}
         </div>

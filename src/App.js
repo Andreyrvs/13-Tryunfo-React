@@ -18,8 +18,8 @@ class App extends Component {
       cardName: '',
       cardRare: '',
       cardTrunfo: false,
-      // hasTrunfo: false,
-      // isSaveButtonDisabled: true,
+      hasTrunfo: false,
+      isSaveButtonDisabled: true,
     };
   }
 

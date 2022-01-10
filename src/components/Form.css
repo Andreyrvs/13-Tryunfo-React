@@ -4,3 +4,26 @@ form {
   flex-direction: column;
   margin: 20px;
 }
+
+button {
+  user-select: none;
+}
+
+textarea {
+  border: 0;
+  border-bottom: 2px solid green;
+  outline: 0;
+  resize: none;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  user-select: none;
+}
+
+input {
+  border: 0;
+  border-bottom: 2px solid green;
+  outline: 0;
+}

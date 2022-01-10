@@ -22,18 +22,20 @@ class Card extends Component {
           alt={ cardName }
           data-testid="image-card"
           src={ cardImage }
+          height="300px"
+          width="300px"
         />
         <p data-testid="description-card">
           { cardDescription }
         </p>
         <p data-testid="attr1-card">
-          { cardAttr1 }
+          Attr01........{ cardAttr1 }
         </p>
         <p data-testid="attr2-card">
-          { cardAttr2 }
+          Attr02........{ cardAttr2 }
         </p>
         <p data-testid="attr3-card">
-          { cardAttr3 }
+          Attr03........{ cardAttr3 }
         </p>
         <p data-testid="rare-card">
           { cardRare }

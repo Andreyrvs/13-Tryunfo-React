@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import './Input.css';
 
 class Input extends Component {
   render() {
-    const { handleChange, datatest, type, elementId, value, label, name } = this.props;
+    const { onInputChange, datatest, type, elementId, value, label, name } = this.props;
+
     return (
       <label htmlFor={ elementId }>
         { label }
@@ -12,7 +12,7 @@ class Input extends Component {
           data-testid={ datatest }
           id={ elementId }
           name={ name }
-          onChange={ handleChange }
+          onChange={ onInputChange }
           type={ type }
           value={ value }
         />
@@ -24,7 +24,7 @@ class Input extends Component {
 Input.propTypes = {
   datatest: PropTypes.string,
   elementId: PropTypes.string,
-  handleChange: PropTypes.func,
+  onInputChange: PropTypes.string,
   label: PropTypes.string,
   name: PropTypes.string,
   type: PropTypes.string,

@@ -18,88 +18,89 @@ class Form extends Component {
       cardName,
       cardRare,
       cardTrunfo,
-      // hasTrunfo,
+      hasTrunfo,
       isSaveButtonDisabled,
       onInputChange,
       onSaveButtonClick,
     } = this.props;
+
     return (
       <div>
         <h1>Adicionar Nova Carta</h1>
         <form>
           <Input
             datatest="name-input"
-            handleChange={ onInputChange }
+            onInputChange={ onInputChange }
             id="input-name"
             label="Nome"
-            name={ cardName }
+            name="cardName"
             type="text"
             value={ cardName }
           />
           <TextArea
             datatest="description-input"
-            handleChange={ onInputChange }
+            onInputChange={ onInputChange }
             id="input-description"
             label="Descrição"
-            name={ cardDescription }
+            name="cardDescription"
             value={ cardDescription }
           />
           <Input
             datatest="attr1-input"
-            handleChange={ onInputChange }
+            onInputChange={ onInputChange }
             id="input-attr01"
             label="Attr01"
-            name={ cardAttr1 }
+            name="cardAttr1"
             type="number"
             value={ cardAttr1 }
           />
           <Input
             datatest="attr2-input"
-            handleChange={ onInputChange }
+            onInputChange={ onInputChange }
             id="input-attr02"
             label="Attr02"
-            name={ cardAttr2 }
+            name="cardAttr2"
             type="number"
             value={ cardAttr2 }
           />
           <Input
             datatest="attr3-input"
-            handleChange={ onInputChange }
+            onInputChange={ onInputChange }
             id="input-attr03"
             label="Attr03"
-            name={ cardAttr3 }
+            name="cardAttr3"
             type="number"
             value={ cardAttr3 }
           />
           <Input
             datatest="image-input"
-            handleChange={ onInputChange }
+            onInputChange={ onInputChange }
             id="input-image"
             label="Imagem"
-            name={ cardImage }
+            name="cardImage"
             value={ cardImage }
           />
           <Select
             datatest="rare-input"
-            handleChange={ onInputChange }
+            onInputChange={ onInputChange }
             id="input-select"
             label="Raridade"
-            name={ cardRare }
+            name="cardRare"
             value={ cardRare }
           />
           <Checkbox
             datatest="trunfo-input"
-            handleChange={ onInputChange }
+            onInputChange={ onInputChange }
             label="Super Trybe Trunfo"
-            name={ cardTrunfo }
+            name="cardTrunfo"
             type="checkbox"
             value={ cardTrunfo }
           />
           <Button
             datatest="save-button"
-            handleChange={ onSaveButtonClick }
+            onInputChange={ onSaveButtonClick }
             id="button-save"
-            name={ isSaveButtonDisabled }
+            name="isSaveButtonDisabled"
             type="button"
             value={ isSaveButtonDisabled }
           />

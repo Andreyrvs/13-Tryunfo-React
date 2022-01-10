@@ -6,8 +6,7 @@ import './App.css';
 class App extends Component {
   constructor() {
     super();
-    this.handleChange = this.handleChange.bind(this);
-    this.onInputChange = this.onInputChange.bind(this);
+    this.handleInput = this.handleInput.bind(this);
     this.onSaveButtonClick = this.onSaveButtonClick.bind(this);
 
     this.state = {
@@ -24,11 +23,11 @@ class App extends Component {
     };
   }
 
-  onInputChange = (event) => {
-    const { name, value } = event.target;
-
+  handleInput = ({ target }) => {
+    const { name, value, type, checked } = target;
+    
     this.setState({
-      [name]: value,
+      [name]: type === 'checkbox' ? checked : value,
     });
   }
 
@@ -36,15 +35,40 @@ class App extends Component {
     console.log('onSaveButtonClick');
   }
 
-  handleChange = () => {
-    console.log('Clicou');
-  }
-
   render() {
+    const {
+      cardAttr1,
+      cardAttr2,
+      cardAttr3,
+      cardDescription,
+      cardImage,
+      cardName,
+      cardRare,
+      cardTrunfo,
+    } = this.state;
     return (
       <div className="super-trunfo-container">
-        <Form />
-        <Card />
+        <Form
+        onInputChange={ this.handleInput }
+        cardAttr1={ cardAttr1 }
+        cardAttr2={ cardAttr2 }
+        cardAttr3={ cardAttr3}
+        cardDescription={ cardDescription }
+        cardImage={ cardImage }
+        cardName={ cardName }
+        cardRare={ cardRare }
+        cardTrunfo={ cardTrunfo}
+        />
+        <Card
+        cardAttr1={ cardAttr1 }
+        cardAttr2={ cardAttr2 }
+        cardAttr3={ cardAttr3}
+        cardDescription={ cardDescription }
+        cardImage={ cardImage }
+        cardName={ cardName }
+        cardRare={ cardRare }
+        cardTrunfo={ cardTrunfo}
+        />
       </div>
     );
   }

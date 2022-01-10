@@ -16,8 +16,6 @@ class Card extends Component {
     } = this.props;
 
     return (
-      <div className="card-container">
-        <h1 className="pre-view">Pré-visialização</h1>
         <div data-testid="name-card" className="card">
           <div className="card-name">
             <p>
@@ -52,7 +50,6 @@ class Card extends Component {
           </p>
           {cardTrunfo && <p data-testid="trunfo-card">Super Trunfo</p>}
         </div>
-      </div>
     );
   }
 }

@@ -98,7 +98,7 @@ class Form extends Component {
           />
           <Button
             datatest="save-button"
-            onInputChange={ onSaveButtonClick }
+            onSaveButtonClick={ onSaveButtonClick }
             id="button-save"
             name="isSaveButtonDisabled"
             type="button"

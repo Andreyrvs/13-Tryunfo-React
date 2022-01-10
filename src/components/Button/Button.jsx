@@ -3,13 +3,12 @@ import PropTypes from 'prop-types';
 
 class Button extends Component {
   render() {
-    const { datatest, elementId, onInputChange, type, value } = this.props;
+    const { datatest, value, onSaveButtonClick, type } = this.props;
     return (
       <button
         data-testid={ datatest }
         disabled={ value }
-        id={ elementId }
-        onClick={ onInputChange }
+        onClick={ onSaveButtonClick }
         type={ type === 'button' ? 'button' : 'submit' }
       >
         Salvar
@@ -21,9 +20,9 @@ class Button extends Component {
 Button.propTypes = {
   datatest: PropTypes.string,
   elementId: PropTypes.string,
-  onInputChange: PropTypes.func,
-  type: PropTypes.string,
   value: PropTypes.bool,
+  onSaveButtonClick: PropTypes.func,
+  type: PropTypes.string,
 }.isRequired;
 
 export default Button;

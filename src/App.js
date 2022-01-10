@@ -69,7 +69,28 @@ class App extends Component {
   };
 
   onSaveButtonClick = () => {
-    console.log('Clicou');
+    // const { cardAttr1,
+    //   cardAttr2,
+    //   cardAttr3,
+    //   cardDescription,
+    //   cardImage,
+    //   cardName,
+    //   cardRare,
+    //  } = this.state;
+    //  const { value } = target;
+
+    this.setState({
+      cardAttr1: 0,
+      cardAttr2: 0,
+      cardAttr3: 0,
+      cardDescription: '',
+      cardImage: '',
+      cardName: '',
+      cardRare: 'normal',
+      cardTrunfo: false,
+      // hasTrunfo: false,
+      isSaveButtonDisabled: true,
+    });
   };
 
   render() {

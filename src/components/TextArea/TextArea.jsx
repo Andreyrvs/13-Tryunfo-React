@@ -22,7 +22,7 @@ class TextArea extends Component {
 TextArea.propTypes = {
   datatest: PropTypes.string,
   elementId: PropTypes.string,
-  onInputChange: PropTypes.string,
+  onInputChange: PropTypes.func,
   label: PropTypes.string,
   value: PropTypes.string,
 }.isRequire;

@@ -22,4 +22,6 @@ h1 {
 
 .super-trunfo-container {
   display: flex;
+  height: 1056px;
+  width: 1440px;
 }

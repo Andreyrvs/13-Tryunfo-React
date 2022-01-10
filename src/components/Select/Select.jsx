@@ -26,7 +26,7 @@ class Select extends Component {
 Select.propTypes = {
   datatest: PropTypes.string,
   elementId: PropTypes.string,
-  onInputChange: PropTypes.string,
+  onInputChange: PropTypes.func,
   value: PropTypes.string,
   label: PropTypes.string,
 }.isRequire;

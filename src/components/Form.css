@@ -1,8 +1,21 @@
-form {
+.form-container {
   align-items: baseline;
   display: flex;
   flex-direction: column;
-  margin: 20px;
+  height: 1056px;
+  width: 690px;
+}
+
+.form-container > h1 {
+  left: 131px;
+  position: absolute;
+  top: 122px;
+}
+
+form {
+  left: 133px;
+  top: 233px;
+  position: absolute;
 }
 
 button {
@@ -12,8 +25,10 @@ button {
 textarea {
   border: 0;
   border-bottom: 2px solid green;
+  height: 80px;
   outline: 0;
   resize: none;
+  width: 355px;
 }
 
 label {

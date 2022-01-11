@@ -18,7 +18,7 @@ class App extends Component {
       cardName: '',
       cardRare: 'normal',
       cardTrunfo: false,
-      // hasTrunfo: false,
+      hasTrunfo: false,
       isSaveButtonDisabled: true,
       cardSave: [],
     };
@@ -97,7 +97,7 @@ class App extends Component {
 
     this.setState({
       cardSave: [...CartasAnteriores, card],
-    });
+    }, this.handleTrunfo);
 
     console.log(card);
 
@@ -110,10 +110,21 @@ class App extends Component {
       cardName: '',
       cardRare: 'normal',
       cardTrunfo: false,
-      // hasTrunfo: false,
+      hasTrunfo: false,
       isSaveButtonDisabled: true,
     });
   };
+
+  handleTrunfo = () => {
+    const { cardTrunfo, hasTunfo, cardSave } = this.state;
+
+    cardSave.filter((trunfo) => (
+       Object.entries(trunfo).some((un) => (
+         un
+      ))
+    ));
+
+  }
 
   render() {
     const {

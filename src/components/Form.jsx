@@ -30,86 +30,80 @@ class Form extends Component {
         <form>
           <Input
             datatest="name-input"
-            onInputChange={onInputChange}
+            onInputChange={ onInputChange }
             id="input-name"
             label="Nome"
             name="cardName"
             type="text"
-            value={cardName}
+            value={ cardName }
           />
           <TextArea
             datatest="description-input"
-            onInputChange={onInputChange}
+            onInputChange={ onInputChange }
             id="input-description"
             label="Descrição"
             name="cardDescription"
-            value={cardDescription}
+            value={ cardDescription }
           />
           <Input
             datatest="attr1-input"
-            onInputChange={onInputChange}
+            onInputChange={ onInputChange }
             id="input-attr01"
             label="Attr01"
             name="cardAttr1"
             type="number"
-            value={cardAttr1}
+            value={ cardAttr1 }
           />
           <Input
             datatest="attr2-input"
-            onInputChange={onInputChange}
+            onInputChange={ onInputChange }
             id="input-attr02"
             label="Attr02"
             name="cardAttr2"
             type="number"
-            value={cardAttr2}
+            value={ cardAttr2 }
           />
           <Input
             datatest="attr3-input"
-            onInputChange={onInputChange}
+            onInputChange={ onInputChange }
             id="input-attr03"
             label="Attr03"
             name="cardAttr3"
             type="number"
-            value={cardAttr3}
+            value={ cardAttr3 }
           />
           <Input
             datatest="image-input"
-            onInputChange={onInputChange}
+            onInputChange={ onInputChange }
             id="input-image"
             label="Imagem"
             name="cardImage"
-            value={cardImage}
+            value={ cardImage }
           />
           <Select
             datatest="rare-input"
-            onInputChange={onInputChange}
+            onInputChange={ onInputChange }
             id="input-select"
             label="Raridade"
             name="cardRare"
-            value={cardRare}
+            value={ cardRare }
           />
-          {hasTrunfo ? 'Você já tem um Super Trunfo em seu baralho' :
-            <label>
-              <Checkbox
-                datatest="trunfo-input"
-                onInputChange={onInputChange}
-                name="cardTrunfo"
-                type="checkbox"
-                value={cardTrunfo}
-              />
-              Super Trybe Trunfo
-            </label>
-          }
-          <label>
-            <Button
-              datatest="save-button"
-              onSaveButtonClick={onSaveButtonClick}
-              id="button-save"
-              name="isSaveButtonDisabled"
-              type="button"
-              value={isSaveButtonDisabled}
-            />
-          </label>
+          { hasTrunfo ? 'Você já tem um Super Trunfo em seu baralho' : <Checkbox
+            datatest="trunfo-input"
+            onInputChange={ onInputChange }
+            label="Super Trybe Trunfo"
+            name="cardTrunfo"
+            type="checkbox"
+            value={ cardTrunfo }
+          />}
+          <Button
+            datatest="save-button"
+            onSaveButtonClick={ onSaveButtonClick }
+            id="button-save"
+            name="isSaveButtonDisabled"
+            type="button"
+            value={ isSaveButtonDisabled }
+          />
         </form>
       </div>
     );

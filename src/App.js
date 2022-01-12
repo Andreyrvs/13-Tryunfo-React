@@ -119,8 +119,7 @@ class App extends Component {
     const { cardSave } = this.state;
 
     const boll = cardSave.some((trunfo) => trunfo.cardTrunfo === true);
-    this.setState({ hasTrunfo: boll})
-
+    this.setState({ hasTrunfo: boll });
   }
 
   render() {

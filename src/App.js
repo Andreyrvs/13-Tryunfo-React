@@ -128,7 +128,7 @@ class App extends Component {
 
   /**
    * Consultei o repositório do [Rolwane Borges] para resolver essa parte.
-   * Função handleTrumpValidation
+   * Função handleLetterRemoval
    * https://github.com/tryber/sd-017-project-tryunfo/pull/125
    */
 

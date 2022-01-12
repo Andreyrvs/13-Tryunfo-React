@@ -102,6 +102,7 @@ class Form extends Component {
             id="button-save"
             name="isSaveButtonDisabled"
             type="button"
+            text="Salvar"
             value={ isSaveButtonDisabled }
           />
         </form>

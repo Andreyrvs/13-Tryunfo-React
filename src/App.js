@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Form from './components/Form';
 import Card from './components/Card';
 import './App.css';
+import Button from './components/Button/Button';
 
 class App extends Component {
   constructor() {
@@ -97,7 +98,7 @@ class App extends Component {
 
     this.setState({
       cardSave: [...CartasAnteriores, card],
-    }, this.handleTrunfoValidation);
+    }, this.handleTrumpValidation);
 
     this.setState({
       cardAttr1: 0,
@@ -113,11 +114,28 @@ class App extends Component {
     });
   };
 
-  handleTrunfoValidation = () => {
+  /**
+   * Consultei o repositório do [Rolwane Borges] para resolver essa parte.
+   * Função handleTrumpValidation
+   * https://github.com/tryber/sd-017-project-tryunfo/pull/125
+   */
+  handleTrumpValidation = () => {
     const { cardSave } = this.state;
 
     const boll = cardSave.some((trunfo) => trunfo.cardTrunfo === true);
     this.setState({ hasTrunfo: boll });
+  }
+
+  /**
+   * Consultei o repositório do [Rolwane Borges] para resolver essa parte.
+   * Função handleTrumpValidation
+   * https://github.com/tryber/sd-017-project-tryunfo/pull/125
+   */
+
+  handleLetterRemoval = (id) => {
+    const { cardSave } = this.state;
+    const updateCards = cardSave.filter((card) => card.cardName !== id);
+    this.setState({ cardSave: updateCards }, this.handleTrumpValidation);
   }
 
   render() {
@@ -162,19 +180,26 @@ class App extends Component {
             cardTrunfo={ cardTrunfo }
           />
         </div>
-        <div className="new-card">
+        <div className="new-card-container">
           {cardSave.map((card) => (
-            <Card
-              key={ card.cardName }
-              cardAttr1={ card.cardAttr1 }
-              cardAttr2={ card.cardAttr2 }
-              cardAttr3={ card.cardAttr3 }
-              cardDescription={ card.cardDescription }
-              cardImage={ card.cardImage }
-              cardName={ card.cardName }
-              cardRare={ card.cardRare }
-              cardTrunfo={ card.cardTrunfo }
-            />
+            <div className="new-card" key={ card.cardDescription }>
+              <Card
+                key={ card.cardName }
+                cardAttr1={ card.cardAttr1 }
+                cardAttr2={ card.cardAttr2 }
+                cardAttr3={ card.cardAttr3 }
+                cardDescription={ card.cardDescription }
+                cardImage={ card.cardImage }
+                cardName={ card.cardName }
+                cardRare={ card.cardRare }
+                cardTrunfo={ card.cardTrunfo }
+              />
+              <Button
+                text="Excluir"
+                datatest="delete-button"
+                onSaveButtonClick={ () => this.handleLetterRemoval(card.cardName) }
+              />
+            </div>
           ))}
         </div>
       </div>

@@ -23,8 +23,13 @@ h1 {
   margin: 40px;
 }
 
-.new-card {
+.new-card-container {
   display: flex;
   flex-flow: row wrap;
   gap: 20px;
+}
+
+.new-card {
+  display: flex;
+  flex-direction: column;
 }

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 class Button extends Component {
   render() {
-    const { datatest, value, onSaveButtonClick, type } = this.props;
+    const { datatest, value, onSaveButtonClick, type, text } = this.props;
     return (
       <button
         data-testid={ datatest }
@@ -11,7 +11,7 @@ class Button extends Component {
         onClick={ onSaveButtonClick }
         type={ type === 'button' ? 'button' : 'submit' }
       >
-        Salvar
+        { text }
       </button>
     );
   }
@@ -20,6 +20,7 @@ class Button extends Component {
 Button.propTypes = {
   datatest: PropTypes.string,
   elementId: PropTypes.string,
+  text: PropTypes.string,
   value: PropTypes.bool,
   onSaveButtonClick: PropTypes.func,
   type: PropTypes.string,

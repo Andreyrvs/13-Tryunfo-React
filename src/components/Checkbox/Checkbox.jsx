@@ -3,9 +3,8 @@ import PropTypes from 'prop-types';
 
 class Checkbox extends Component {
   render() {
-    const { datatest, elementId, onInputChange, label, type, value, name } = this.props;
+    const { datatest, elementId, onInputChange, type, value, name } = this.props;
     return (
-      <label htmlFor={ elementId }>
         <input
           checked={ value }
           data-testid={ datatest }
@@ -14,8 +13,6 @@ class Checkbox extends Component {
           onChange={ onInputChange }
           type={ type }
         />
-        { label }
-      </label>
     );
   }
 }
@@ -24,7 +21,6 @@ Checkbox.propTypes = {
   datatest: PropTypes.string,
   elementId: PropTypes.string,
   onInputChange: PropTypes.func,
-  label: PropTypes.string,
   type: PropTypes.string,
   value: PropTypes.bool,
 }.isRequired;

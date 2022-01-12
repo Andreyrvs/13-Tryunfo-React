@@ -97,7 +97,7 @@ class App extends Component {
 
     this.setState({
       cardSave: [...CartasAnteriores, card],
-    }, this.handleTrunfo);
+    }, this.handleTrunfoValidation);
 
     console.log(card);
 
@@ -115,14 +115,11 @@ class App extends Component {
     });
   };
 
-  handleTrunfo = () => {
-    const { cardTrunfo, hasTunfo, cardSave } = this.state;
+  handleTrunfoValidation = () => {
+    const { cardSave } = this.state;
 
-    cardSave.filter((trunfo) => (
-       Object.entries(trunfo).some((un) => (
-         un
-      ))
-    ));
+    const boll = cardSave.some((trunfo) => trunfo.cardTrunfo === true);
+    this.setState({ hasTrunfo: boll})
 
   }
 
@@ -137,6 +134,7 @@ class App extends Component {
       cardRare,
       cardTrunfo,
       cardSave,
+      hasTrunfo,
       isSaveButtonDisabled,
     } = this.state;
     return (
@@ -154,6 +152,7 @@ class App extends Component {
             cardTrunfo={ cardTrunfo }
             isSaveButtonDisabled={ isSaveButtonDisabled }
             onSaveButtonClick={ this.onSaveButtonClick }
+            hasTrunfo={ hasTrunfo }
           />
           <Card
             cardAttr1={ cardAttr1 }

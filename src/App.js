@@ -99,8 +99,6 @@ class App extends Component {
       cardSave: [...CartasAnteriores, card],
     }, this.handleTrunfoValidation);
 
-    console.log(card);
-
     this.setState({
       cardAttr1: 0,
       cardAttr2: 0,
@@ -167,7 +165,7 @@ class App extends Component {
         <div className="new-card">
           {cardSave.map((card) => (
             <Card
-              key={ card }
+              key={ card.cardName }
               cardAttr1={ card.cardAttr1 }
               cardAttr2={ card.cardAttr2 }
               cardAttr3={ card.cardAttr3 }

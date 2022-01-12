@@ -88,7 +88,7 @@ class Form extends Component {
             name="cardRare"
             value={ cardRare }
           />
-          { hasTrunfo ? 'Você já tem um Super Trunfo em seu baralho' : <Checkbox
+          { hasTrunfo ? <p>Você já tem um Super Trunfo em seu baralho</p> : <Checkbox
             datatest="trunfo-input"
             onInputChange={ onInputChange }
             label="Super Trybe Trunfo"

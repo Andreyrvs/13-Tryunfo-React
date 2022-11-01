@@ -114,23 +114,12 @@ class App extends Component {
     });
   };
 
-  /**
-   * Consultei o repositório do [Rolwane Borges] para resolver essa parte.
-   * Função handleTrumpValidation
-   * https://github.com/tryber/sd-017-project-tryunfo/pull/125
-   */
   handleTrumpValidation = () => {
     const { cardSave } = this.state;
 
     const boll = cardSave.some((trunfo) => trunfo.cardTrunfo === true);
     this.setState({ hasTrunfo: boll });
   }
-
-  /**
-   * Consultei o repositório do [Rolwane Borges] para resolver essa parte.
-   * Função handleLetterRemoval
-   * https://github.com/tryber/sd-017-project-tryunfo/pull/125
-   */
 
   handleLetterRemoval = (id) => {
     const { cardSave } = this.state;

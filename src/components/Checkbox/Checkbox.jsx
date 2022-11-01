@@ -5,7 +5,10 @@ class Checkbox extends Component {
   render() {
     const { datatest, elementId, onInputChange, label, type, value, name } = this.props;
     return (
-      <label htmlFor={ elementId }>
+      <label
+        htmlFor={ elementId }
+        className="text-format"
+      >
         <input
           checked={ value }
           data-testid={ datatest }

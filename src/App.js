@@ -3,6 +3,8 @@ import Form from './components/Form';
 import Card from './components/Card';
 import './App.css';
 import Button from './components/Button/Button';
+import logo from './assets/logo_tryunfo.svg';
+// import BgBrilhosTop from './assets/BgBrilhosTop.svg';
 
 class App extends Component {
   constructor() {
@@ -142,8 +144,30 @@ class App extends Component {
       isSaveButtonDisabled,
     } = this.state;
     return (
-      <div className="super-trunfo-container">
-        <div className="form-preview-container">
+      <div
+        className="
+        bg-primary
+        max-w-screen
+        h-screen
+        flex-col
+        justify-center"
+      >
+        <section className="flex justify-center">
+          <img src={ logo } alt="logo Tryunfo" width="504.31px" height="302px" />
+        </section>
+        <section
+          className="
+          flex
+          justify-center
+          mx-auto
+         bg-pwhite
+          rounded-3xl
+          lg:w-1124
+          md:w-auto
+          h-721
+          gap-cardGap
+         "
+        >
           <Form
             onInputChange={ this.handleChange }
             cardAttr1={ cardAttr1 }
@@ -168,10 +192,14 @@ class App extends Component {
             cardRare={ cardRare }
             cardTrunfo={ cardTrunfo }
           />
-        </div>
-        <div className="new-card-container">
+        </section>
+        <div
+          className="
+          new-card-containe
+        "
+        >
           {cardSave.map((card) => (
-            <div className="new-card" key={ card.cardDescription }>
+            <div className="new-card  bg-pink-600" key={ card.cardDescription }>
               <Card
                 key={ card.cardName }
                 cardAttr1={ card.cardAttr1 }

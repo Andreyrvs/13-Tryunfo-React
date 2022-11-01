@@ -16,7 +16,11 @@ class Card extends Component {
     } = this.props;
 
     return (
-      <div data-testid="name-card" className="card-container">
+      <div
+        data-testid="name-card"
+        className="card-format border-2 border-dotted border-purple-900"
+      >
+        <h1 className="h1-card">Pre Visualização</h1>
         <div className="card-name">
           <p>{ cardName }</p>
         </div>

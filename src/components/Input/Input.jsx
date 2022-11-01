@@ -6,7 +6,10 @@ class Input extends Component {
     const { onInputChange, datatest, type, elementId, value, label, name } = this.props;
 
     return (
-      <label htmlFor={ elementId }>
+      <label
+        htmlFor={ elementId }
+        className="text-format"
+      >
         { label }
         <input
           data-testid={ datatest }

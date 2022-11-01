@@ -25,9 +25,17 @@ class Form extends Component {
     } = this.props;
 
     return (
-      <div className="form-container">
-        <h1>Adicionar Nova Carta</h1>
-        <form>
+      <div
+        className="card-format border-dashed border-4 border-red-600
+       "
+      >
+        <h1
+          className="h1-card"
+        >
+          Adicione Nova Carta
+
+        </h1>
+        <form className="flex flex-col w-full">
           <Input
             datatest="name-input"
             onInputChange={ onInputChange }
@@ -88,14 +96,19 @@ class Form extends Component {
             name="cardRare"
             value={ cardRare }
           />
-          { hasTrunfo ? <p>Você já tem um Super Trunfo em seu baralho</p> : <Checkbox
-            datatest="trunfo-input"
-            onInputChange={ onInputChange }
-            label="Super Trybe Trunfo"
-            name="cardTrunfo"
-            type="checkbox"
-            value={ cardTrunfo }
-          />}
+          { hasTrunfo
+            ? (
+              <p>Você já tem um Super Trunfo em seu baralho</p>)
+            : (
+              <Checkbox
+                datatest="trunfo-input"
+                onInputChange={ onInputChange }
+                label="Super Trybe Trunfo"
+                name="cardTrunfo"
+                type="checkbox"
+                value={ cardTrunfo }
+              />
+            )}
           <Button
             datatest="save-button"
             onSaveButtonClick={ onSaveButtonClick }

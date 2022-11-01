@@ -5,7 +5,10 @@ class TextArea extends Component {
   render() {
     const { datatest, elementId, onInputChange, label, value, name } = this.props;
     return (
-      <label htmlFor={ elementId }>
+      <label
+        htmlFor={ elementId }
+        className="text-format"
+      >
         { label }
         <textarea
           data-testid={ datatest }

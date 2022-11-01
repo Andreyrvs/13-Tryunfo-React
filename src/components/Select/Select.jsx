@@ -5,7 +5,10 @@ class Select extends Component {
   render() {
     const { datatest, elementId, onInputChange, value, label, name } = this.props;
     return (
-      <label htmlFor={ elementId }>
+      <label
+        htmlFor={ elementId }
+        className="text-format "
+      >
         { label }
         <select
           data-testid={ datatest }

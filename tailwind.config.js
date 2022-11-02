@@ -16,7 +16,8 @@ module.exports = {
         primary: '#023031',
         'secondary-green': 'var(--bg-secondary)',
         primarText: 'var(--bg-primary)',
-        secondText: '#3D495C',
+        secondText: '#3d495c',
+        grayPrimary: '#f0f2f5',
       },
       spacing: {
         159: '9.938rem',

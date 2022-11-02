@@ -3,18 +3,24 @@ import PropTypes from 'prop-types';
 
 class TextArea extends Component {
   render() {
-    const { datatest, elementId, onInputChange, label, value, name } = this.props;
+    const {
+      datatest,
+      elementId,
+      onInputChange,
+      value,
+      name,
+      classe,
+    } = this.props;
     return (
-      <label htmlFor={ elementId }>
-        { label }
-        <textarea
-          data-testid={ datatest }
-          id={ elementId }
-          name={ name }
-          onChange={ onInputChange }
-          value={ value }
-        />
-      </label>
+      <textarea
+        className={ classe }
+        data-testid={ datatest }
+        id={ elementId }
+        name={ name }
+        onChange={ onInputChange }
+        value={ value }
+        placeholder="Descreva sua carta..."
+      />
     );
   }
 }

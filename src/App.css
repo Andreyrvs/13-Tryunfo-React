@@ -1,35 +1,49 @@
-body {
-  background: #fafafafa;
-  height: 1056px;
-  width: 1440px;
+/* stylelint-disable max-line-length */
+
+/* stylelint-disable at-rule-empty-line-before */
+
+@import url('index.css') ;
+
+.text-format {
+  @apply font-verdana font-bold text-base text-secondText ;
 }
 
-h1 {
-  color: #444955;
-  font-family: Epilogue , sans-serif;
-  font-size: 28px;
-  font-style: normal;
-  font-weight: 700;
+.h1-card {
+  @apply font-epi uppercase text-primarText font-extrabold text-34xl italic ;
 }
 
-.super-trunfo-container {
-  display: flex;
-  flex-direction: column;
+.card-format {
+  @apply flex flex-col justify-start items-center w-404 h-card mt-10 ;
 }
 
-.form-preview-container {
-  display: flex;
-  flex-direction: row;
-  margin: 40px;
+.bg-brilho-top {
+  background: radial-gradient(var(--gradient-color-stops));
+  height: 1134px;
+  left: -365px;
+  mix-blend-mode: overlay;
+  position: absolute;
+  top: -349px;
+  width: 1134px;
 }
 
-.new-card-container {
-  display: flex;
-  flex-flow: row wrap;
-  gap: 20px;
+.bg-brilho-bottom {
+  background-color: radial-gradient(var(--gradient-color-stops));
+  height: 1134px;
+  left: 895px;
+  mix-blend-mode: hard-light;
+  position: absolute;
+  top: 533px;
+  width: 1134px;
 }
 
-.new-card {
-  display: flex;
-  flex-direction: column;
+.input-main {
+  @apply border-2 border-gray-700 focus:outline-none p-1 shadow rounded-sm focus:ring-2 focus:ring-green-600 focus:border-transparent ;
+}
+
+.input-main-under {
+  @apply focus:outline-none focus:border-green-500 border-b-2 border-gray-700 ;
+}
+
+.input-section {
+  @apply flex items-center space-x-8 ;
 }

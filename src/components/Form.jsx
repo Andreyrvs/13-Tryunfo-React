@@ -167,6 +167,7 @@ class Form extends Component {
               )}
             <Button
               datatest="save-button"
+              isGreen="true"
               onSaveButtonClick={ onSaveButtonClick }
               id="button-save"
               name="isSaveButtonDisabled"

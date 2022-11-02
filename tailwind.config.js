@@ -6,6 +6,8 @@ module.exports = {
     extend: {
       boxShadow: {
         32: 'var(--shadow)',
+        777: 'var(--shadow-top)',
+        up: 'var(--shadow-up)',
       },
       inset: {
         '-349': '-21.813rem',
@@ -21,6 +23,8 @@ module.exports = {
         primarText: 'var(--bg-primary)',
         secondText: '#3d495c',
         grayPrimary: '#f0f2f5',
+        primaryRed: 'var(--bg-red)',
+        secondRed: 'var(--bg-red-s)',
       },
       spacing: {
         159: '9.938rem',
@@ -39,16 +43,17 @@ module.exports = {
       fontSize: {
         '34xl': '1.75rem',
       },
-      backgroundColor: ['checked'],
-      borderColor: ['checked'],
-      animation: ['motion-safe'],
     },
     screens: {
       desktopfront: '1440px',
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      backgroundColor: ['checked'],
+      borderColor: ['checked'],
+      animation: ['motion-safe'],
+    },
   },
   plugins: [],
 };

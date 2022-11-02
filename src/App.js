@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import uuid from 'react-uuid';
 import Form from './components/Form';
 import Card from './components/Card/Card';
-import './App.css';
 import Button from './components/Button/Button';
 import logo from './assets/logo_tryunfo.svg';
+import './App.css';
 
 class App extends Component {
   constructor() {
@@ -12,13 +13,13 @@ class App extends Component {
     this.onSaveButtonClick = this.onSaveButtonClick.bind(this);
 
     this.state = {
-      cardName: '',
-      cardDescription: '',
       cardAttr1: 0,
       cardAttr2: 0,
       cardAttr3: 0,
+      cardDescription: '',
       cardImage: '',
-      cardRare: '',
+      cardName: '',
+      cardRare: 'normal',
       cardTrunfo: false,
       hasTrunfo: false,
       isSaveButtonDisabled: true,
@@ -143,14 +144,12 @@ class App extends Component {
       isSaveButtonDisabled,
     } = this.state;
     return (
-      <div
+      <section
         className="
           bg-primary
           w-screen
           h-screen
           desktopfront:min-h-screen
-          flex-col
-          justify-center
           z-0"
       >
         <section className="flex justify-center">
@@ -163,7 +162,7 @@ class App extends Component {
         </section>
         <section
           className="
-            shadow-inner
+            shadow-777
             flex
             justify-center
             mx-auto
@@ -206,34 +205,35 @@ class App extends Component {
             />
           </div>
         </section>
-        <div
-          className="
-          new-card-containe
-          gap-20
-          "
+        <section
+          className="bg-primary mx-auto w-screen gap-cardGap "
         >
-          {cardSave.map((card) => (
-            <div className="new-card  bg-pink-600" key={ card.cardDescription }>
-              <Card
-                key={ card.cardName }
-                cardAttr1={ card.cardAttr1 }
-                cardAttr2={ card.cardAttr2 }
-                cardAttr3={ card.cardAttr3 }
-                cardDescription={ card.cardDescription }
-                cardImage={ card.cardImage }
-                cardName={ card.cardName }
-                cardRare={ card.cardRare }
-                cardTrunfo={ card.cardTrunfo }
-              />
-              <Button
-                text="Excluir"
-                datatest="delete-button"
-                onSaveButtonClick={ () => this.handleLetterRemoval(card.cardName) }
-              />
-            </div>
-          ))}
-        </div>
-      </div>
+          <section
+            className="grid grid-cols-3 gap-4 justify-center"
+          >
+            {cardSave.map((card) => (
+              <section className="flex flex-col items-center" key={ uuid() }>
+                <Card
+                  key={ card.cardName }
+                  cardAttr1={ card.cardAttr1 }
+                  cardAttr2={ card.cardAttr2 }
+                  cardAttr3={ card.cardAttr3 }
+                  cardDescription={ card.cardDescription }
+                  cardImage={ card.cardImage }
+                  cardName={ card.cardName }
+                  cardRare={ card.cardRare }
+                  cardTrunfo={ card.cardTrunfo }
+                />
+                <Button
+                  text="Excluir"
+                  datatest="delete-button"
+                  onSaveButtonClick={ () => this.handleLetterRemoval(card.cardName) }
+                />
+              </section>
+            ))}
+          </section>
+        </section>
+      </section>
     );
   }
 }

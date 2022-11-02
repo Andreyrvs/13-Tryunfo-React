@@ -87,7 +87,8 @@ class Card extends Component {
                 font-epi
                 font-light
                 text-xs
-                leading-3"
+                leading-3
+                transform -skew-y-6"
               >
                 { handleDescription }
               </p>

@@ -7,6 +7,7 @@ import Select from './Select/Select';
 import TextArea from './TextArea/TextArea';
 import Label from './Label';
 import imageLink from '../assets/imageLink.svg';
+
 import './Form.css';
 
 class Form extends Component {
@@ -45,7 +46,6 @@ class Form extends Component {
               datatest="name-input"
               onInputChange={ onInputChange }
               id="input-name"
-              label="Nome"
               name="cardName"
               type="text"
               value={ cardName }
@@ -54,11 +54,10 @@ class Form extends Component {
           <section className="flex flex-col">
             <Label id="input-description" name="Descrição" />
             <TextArea
-              classe="input-main-under h-20"
+              classe="input-main-under h-20 placeholder-opacity-25"
               datatest="description-input"
               onInputChange={ onInputChange }
               id="input-description"
-              label="Descrição"
               name="cardDescription"
               value={ cardDescription }
             />
@@ -70,10 +69,10 @@ class Form extends Component {
               datatest="attr1-input"
               onInputChange={ onInputChange }
               id="input-attr01"
-              label="Attr01"
               name="cardAttr1"
               type="number"
               value={ cardAttr1 }
+              placeholder="30"
             />
           </section>
           <section className="input-section">
@@ -83,10 +82,10 @@ class Form extends Component {
               datatest="attr2-input"
               onInputChange={ onInputChange }
               id="input-attr02"
-              label="Attr02"
               name="cardAttr2"
               type="number"
               value={ cardAttr2 }
+              placeholder="30"
             />
           </section>
           <section className="input-section">
@@ -96,10 +95,10 @@ class Form extends Component {
               datatest="attr3-input"
               onInputChange={ onInputChange }
               id="input-attr03"
-              label="Attr03"
               name="cardAttr3"
               type="number"
               value={ cardAttr3 }
+              placeholder="90"
             />
           </section>
           <section className="flex items-center gap-3">
@@ -109,7 +108,6 @@ class Form extends Component {
               datatest="image-input"
               onInputChange={ onInputChange }
               id="input-image"
-              label="Imagem"
               name="cardImage"
               value={ cardImage }
             />
@@ -121,14 +119,18 @@ class Form extends Component {
               width="46px"
             />
           </section>
-          <Select
-            datatest="rare-input"
-            onInputChange={ onInputChange }
-            id="input-select"
-            label="Raridade"
-            name="cardRare"
-            value={ cardRare }
-          />
+          <section className="flex flex-col">
+            <Label id="input-select" name="Raridade" />
+            <Select
+              classe="input-main-under h-10 bg-white"
+              datatest="rare-input"
+              onInputChange={ onInputChange }
+              id="input-select"
+              label="Raridade"
+              name="cardRare"
+              value={ cardRare }
+            />
+          </section>
           <section className="flex flex-row space-x-16 justify-start items-center ">
 
             { hasTrunfo
@@ -161,9 +163,9 @@ class Form extends Component {
 }
 
 Form.propTypes = {
-  cardAttr1: PropTypes.string,
-  cardAttr2: PropTypes.string,
-  cardAttr3: PropTypes.string,
+  cardAttr1: PropTypes.number,
+  cardAttr2: PropTypes.number,
+  cardAttr3: PropTypes.number,
   cardDescription: PropTypes.string,
   cardImage: PropTypes.string,
   cardName: PropTypes.string,

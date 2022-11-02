@@ -10,7 +10,6 @@ export default class Label extends Component {
         className="text-format"
       >
         {name}
-
       </label>
     );
   }

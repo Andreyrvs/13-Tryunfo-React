@@ -3,25 +3,29 @@ import PropTypes from 'prop-types';
 
 class Select extends Component {
   render() {
-    const { datatest, elementId, onInputChange, value, label, name } = this.props;
+    const {
+      datatest,
+      elementId,
+      onInputChange,
+      value,
+      classe,
+      name,
+    } = this.props;
     return (
-      <label
-        htmlFor={ elementId }
-        className="text-format "
+      <select
+        className={ classe }
+        data-testid={ datatest }
+        id={ elementId }
+        name={ name }
+        onChange={ onInputChange }
+        value={ value }
+        placeholder="uma Opcao"
       >
-        { label }
-        <select
-          data-testid={ datatest }
-          id={ elementId }
-          name={ name }
-          onChange={ onInputChange }
-          value={ value }
-        >
-          <option>normal</option>
-          <option>raro</option>
-          <option>muito raro</option>
-        </select>
-      </label>
+        <option value="" disabled select>Seleciona uma opção</option>
+        <option>normal</option>
+        <option>raro</option>
+        <option>muito raro</option>
+      </select>
     );
   }
 }
@@ -31,6 +35,7 @@ Select.propTypes = {
   elementId: PropTypes.string,
   onInputChange: PropTypes.func,
   value: PropTypes.string,
+  classe: PropTypes.string,
   label: PropTypes.string,
 }.isRequire;
 

@@ -1,5 +1,6 @@
 :root {
     --bg-primary: #2fc18c;
+    --bg-secondary: #036b52 ;
     --gradient-color-stops: 50% 50% at 50% 50%, var(--bg-primary) 0%, rgba(217, 217, 217, 0) 100%;
 }
 

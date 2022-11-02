@@ -9,7 +9,7 @@ class Input extends Component {
       type,
       elementId,
       value,
-      // label,
+      placeholder,
       name,
       classe,
     } = this.props;
@@ -23,6 +23,7 @@ class Input extends Component {
         onChange={ onInputChange }
         type={ type }
         value={ value }
+        placeholder={ placeholder }
       />
 
     );
@@ -37,6 +38,7 @@ Input.propTypes = {
   name: PropTypes.string,
   type: PropTypes.string,
   value: PropTypes.string,
+  placeholder: PropTypes.string,
 }.isRequired;
 
 export default Input;

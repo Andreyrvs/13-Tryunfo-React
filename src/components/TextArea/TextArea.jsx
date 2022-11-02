@@ -7,18 +7,11 @@ class TextArea extends Component {
       datatest,
       elementId,
       onInputChange,
-      // label,
       value,
       name,
       classe,
     } = this.props;
     return (
-      // <label
-      //   htmlFor={ elementId }
-      //   className="text-format"
-      // >
-      //   { label }
-      //* </label>
       <textarea
         className={ classe }
         data-testid={ datatest }
@@ -26,6 +19,7 @@ class TextArea extends Component {
         name={ name }
         onChange={ onInputChange }
         value={ value }
+        placeholder="Descreva sua carta..."
       />
     );
   }

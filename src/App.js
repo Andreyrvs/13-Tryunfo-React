@@ -13,12 +13,12 @@ class App extends Component {
     this.onSaveButtonClick = this.onSaveButtonClick.bind(this);
 
     this.state = {
-      cardAttr1: 0,
-      cardAttr2: 0,
-      cardAttr3: 0,
-      cardDescription: '',
-      cardImage: '',
-      cardName: '',
+      cardAttr1: 90,
+      cardAttr2: 30,
+      cardAttr3: 30,
+      cardDescription: 'a',
+      cardImage: 'a',
+      cardName: 'a',
       cardRare: 'normal',
       cardTrunfo: false,
       hasTrunfo: false,
@@ -144,82 +144,84 @@ class App extends Component {
       isSaveButtonDisabled,
     } = this.state;
     return (
-      <div
-        className="
-        bg-primary
-        max-w-screen
-        h-screen
-        flex-col
-        justify-center"
-      >
-        <section className="flex justify-center">
-          <img src={ logo } alt="logo Tryunfo" width="504.31px" height="302px" />
-        </section>
-        <section
-          className="
-          flex
-          justify-center
-          mx-auto
-         bg-pwhite
-          rounded-3xl
-          lg:w-1124
-          md:w-auto
-          h-721
-          gap-cardGap
-         "
-        >
-          <Form
-            onInputChange={ this.handleChange }
-            cardAttr1={ cardAttr1 }
-            cardAttr2={ cardAttr2 }
-            cardAttr3={ cardAttr3 }
-            cardDescription={ cardDescription }
-            cardImage={ cardImage }
-            cardName={ cardName }
-            cardRare={ cardRare }
-            cardTrunfo={ cardTrunfo }
-            isSaveButtonDisabled={ isSaveButtonDisabled }
-            onSaveButtonClick={ this.onSaveButtonClick }
-            hasTrunfo={ hasTrunfo }
-          />
-          <Card
-            cardAttr1={ cardAttr1 }
-            cardAttr2={ cardAttr2 }
-            cardAttr3={ cardAttr3 }
-            cardDescription={ cardDescription }
-            cardImage={ cardImage }
-            cardName={ cardName }
-            cardRare={ cardRare }
-            cardTrunfo={ cardTrunfo }
-          />
-        </section>
+      <section>
+
         <div
           className="
-          new-card-containe
-        "
+          bg-primary
+          w-screen
+          h-screen
+          flex-col
+          justify-center
+          z-0"
         >
-          {cardSave.map((card) => (
-            <div className="new-card  bg-pink-600" key={ card.cardDescription }>
-              <Card
-                key={ card.cardName }
-                cardAttr1={ card.cardAttr1 }
-                cardAttr2={ card.cardAttr2 }
-                cardAttr3={ card.cardAttr3 }
-                cardDescription={ card.cardDescription }
-                cardImage={ card.cardImage }
-                cardName={ card.cardName }
-                cardRare={ card.cardRare }
-                cardTrunfo={ card.cardTrunfo }
-              />
-              <Button
-                text="Excluir"
-                datatest="delete-button"
-                onSaveButtonClick={ () => this.handleLetterRemoval(card.cardName) }
-              />
-            </div>
-          ))}
+          <section className="flex justify-center">
+            <img src={ logo } alt="logo Tryunfo" width="250.31px" height="150px" />
+          </section>
+          <section
+            className="
+              flex
+              justify-center
+              mx-auto
+            bg-pwhite
+              rounded-3xl
+              w-1124
+              h-721
+              z-0
+              gap-cardGap"
+          >
+            <Form
+              onInputChange={ this.handleChange }
+              cardAttr1={ cardAttr1 }
+              cardAttr2={ cardAttr2 }
+              cardAttr3={ cardAttr3 }
+              cardDescription={ cardDescription }
+              cardImage={ cardImage }
+              cardName={ cardName }
+              cardRare={ cardRare }
+              cardTrunfo={ cardTrunfo }
+              isSaveButtonDisabled={ isSaveButtonDisabled }
+              onSaveButtonClick={ this.onSaveButtonClick }
+              hasTrunfo={ hasTrunfo }
+            />
+            <Card
+              cardAttr1={ cardAttr1 }
+              cardAttr2={ cardAttr2 }
+              cardAttr3={ cardAttr3 }
+              cardDescription={ cardDescription }
+              cardImage={ cardImage }
+              cardName={ cardName }
+              cardRare={ cardRare }
+              cardTrunfo={ cardTrunfo }
+            />
+          </section>
+          <div
+            className="
+              new-card-containe"
+          >
+            {cardSave.map((card) => (
+              <div className="new-card  bg-pink-600" key={ card.cardDescription }>
+                <Card
+                  key={ card.cardName }
+                  cardAttr1={ card.cardAttr1 }
+                  cardAttr2={ card.cardAttr2 }
+                  cardAttr3={ card.cardAttr3 }
+                  cardDescription={ card.cardDescription }
+                  cardImage={ card.cardImage }
+                  cardName={ card.cardName }
+                  cardRare={ card.cardRare }
+                  cardTrunfo={ card.cardTrunfo }
+                />
+                <Button
+                  text="Excluir"
+                  datatest="delete-button"
+                  onSaveButtonClick={ () => this.handleLetterRemoval(card.cardName) }
+                />
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
+      </section>
     );
   }
 }

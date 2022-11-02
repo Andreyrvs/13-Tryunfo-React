@@ -6,6 +6,15 @@ class Button extends Component {
     const { datatest, value, onSaveButtonClick, type, text } = this.props;
     return (
       <button
+        className="bg-primarText
+          w-28
+          h-10
+          rounded-sm
+          hover:bg-green-700
+          focus:outline-none
+          focus:ring-2
+          focus:ring-green-600
+          focus:ring-opacity-50"
         data-testid={ datatest }
         disabled={ value }
         onClick={ onSaveButtonClick }

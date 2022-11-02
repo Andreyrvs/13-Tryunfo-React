@@ -7,9 +7,10 @@ class Checkbox extends Component {
     return (
       <label
         htmlFor={ elementId }
-        className="text-format"
+        className="text-format flex gap-4"
       >
         <input
+          className="checked:bg-green-600 checked:border-transparent"
           checked={ value }
           data-testid={ datatest }
           id={ elementId }

@@ -1,4 +1,9 @@
+/* stylelint-disable max-line-length */
+
 /* stylelint-disable at-rule-empty-line-before */
+
+@import url('index.css') ;
+
 .text-format {
   @apply font-verdana font-bold text-base text-secondText ;
 }
@@ -9,4 +14,36 @@
 
 .card-format {
   @apply flex flex-col justify-start items-center w-404 h-card mt-10 ;
+}
+
+.bg-brilho-top {
+  background: radial-gradient(var(--gradient-color-stops));
+  height: 1134px;
+  left: -365px;
+  mix-blend-mode: overlay;
+  position: absolute;
+  top: -349px;
+  width: 1134px;
+}
+
+.bg-brilho-bottom {
+  background-color: radial-gradient(var(--gradient-color-stops));
+  height: 1134px;
+  left: 895px;
+  mix-blend-mode: hard-light;
+  position: absolute;
+  top: 533px;
+  width: 1134px;
+}
+
+.input-main {
+  @apply border-2 border-gray-700 focus:outline-none p-1 shadow rounded-sm focus:ring-2 focus:ring-green-600 focus:border-transparent ;
+}
+
+.input-main-under {
+  @apply focus:outline-none focus:border-green-500 border-b-2 border-gray-700 ;
+}
+
+.input-section {
+  @apply flex items-center space-x-8 ;
 }

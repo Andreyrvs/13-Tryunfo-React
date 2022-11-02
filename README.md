@@ -39,3 +39,13 @@ npm install
 ```bash
   cd src/ && npm start
 ```
+
+---
+
+## Preview da Aplicação
+
+![Tryunfo](./print-tryunfo-01.png)
+
+---
+
+![css](./print-02.png)

@@ -143,6 +143,7 @@ class App extends Component {
       hasTrunfo,
       isSaveButtonDisabled,
     } = this.state;
+
     return (
       <section
         className="

@@ -8,8 +8,6 @@ import TextArea from './TextArea/TextArea';
 import Label from './Label';
 import imageLink from '../assets/imageLink.svg';
 
-import './Form.css';
-
 class Form extends Component {
   render() {
     const {

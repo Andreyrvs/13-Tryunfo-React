@@ -9,20 +9,19 @@ export default class CardPreview extends Component {
       cardAttr2,
       cardAttr3,
       cardRare,
-      cardTrunfo,
     } = this.props;
     const DOTS = '....................................';
     const attrFormated = (number) => `Attr${String(number)}${DOTS}`;
     return (
-      <section className="-mt-36 flex flex-col gap-5">
-        <section className="attr flex flex-row">
+      <section className="-mt-36 flex flex-col gap-2">
+        <section className="attr">
           <span>
             {attrFormated('01')}
           </span>
           <section className="flex flex-row gap-2">
             <p
               data-testid="attr2-card"
-              className="attr-text "
+              className="attr-text"
             >
               { cardAttr1 }
             </p>
@@ -33,28 +32,32 @@ export default class CardPreview extends Component {
           <span>
             {attrFormated('02')}
           </span>
-          <p
-            data-testid="attr2-card"
-            className="attr-text "
-          >
-            { cardAttr2 }
-          </p>
-          <AttrImage />
+          <section className="flex flex-row gap-2">
+            <p
+              data-testid="attr2-card"
+              className="attr-text "
+            >
+              { cardAttr2 }
+            </p>
+            <AttrImage />
+          </section>
         </section>
         <section className="attr">
           <span>
             {attrFormated('03')}
           </span>
-          <p
-            data-testid="attr2-card"
-            className="attr-text "
-          >
-            { cardAttr3 }
-          </p>
-          <AttrImage />
+          <section className="flex flex-row gap-2">
+            <p
+              data-testid="attr2-card"
+              className="attr-text"
+            >
+              { cardAttr3 }
+            </p>
+            <AttrImage />
+          </section>
         </section>
         <p data-testid="rare-card">{ cardRare }</p>
-        { cardTrunfo && <p data-testid="trunfo-card">Super Trunfo</p> }
+
       </section>
     );
   }
@@ -65,5 +68,4 @@ CardPreview.propTypes = {
   cardAttr2: PropTypes.string,
   cardAttr3: PropTypes.string,
   cardRare: PropTypes.string,
-  cardTrunfo: PropTypes.bool,
 }.isRequire;

@@ -6,7 +6,7 @@ export default class AttrImage extends Component {
     return (
       <img
         src={ attrRect }
-        className="-ml-4 z-10"
+        className="-ml-12 z-10"
         alt="retangulo verde"
         height="29.92px"
         width="46.72px"

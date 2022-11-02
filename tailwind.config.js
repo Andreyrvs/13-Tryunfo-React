@@ -4,6 +4,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      boxShadow: {
+        32: 'var(--shadow)',
+      },
       inset: {
         '-349': '-21.813rem',
         '-365': '-22.813rem',

@@ -47,6 +47,7 @@ class Form extends Component {
               name="cardName"
               type="text"
               value={ cardName }
+              placeholder="Melhor nome..."
             />
           </section>
           <section className="flex flex-col">
@@ -108,6 +109,7 @@ class Form extends Component {
               id="input-image"
               name="cardImage"
               value={ cardImage }
+              placeholder="https://minha-imagem.jpg"
             />
             <img
               className="-ml-14"

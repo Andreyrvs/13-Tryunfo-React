@@ -208,7 +208,9 @@ class App extends Component {
         </section>
         <div
           className="
-              new-card-containe"
+          new-card-containe
+          gap-20
+          "
         >
           {cardSave.map((card) => (
             <div className="new-card  bg-pink-600" key={ card.cardDescription }>

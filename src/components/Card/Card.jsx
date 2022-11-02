@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import defaultImage from '../../assets/Card/default-image.svg';
 import imageCover from '../../assets/Card/imageCover.svg';
 import cardRect57 from '../../assets/Card/card-rect-57.svg';
+import superTrunfo from '../../assets/Card/super-trunfo.svg';
 import CardPreview from './CardPreview';
 
 const DESCRIPTION = 'É uma das três principais tecnologias da World Wide Web.';
@@ -25,24 +26,25 @@ class Card extends Component {
     return (
       <section
         data-testid="name-card"
-        className="card-format bg-white w-358 h-534 rounded-lg  shadow-xl"
+        className="card-format shadow-32 w-358 h-534 rounded-lg"
       >
         <section
           className="flex flex-col w-338 h-514 rounded-lg bg-secondary-green"
         >
           <section
-            className="flex flex-col items-center "
+            className="flex flex-col items-center mt-2"
           >
             <p
-              className="z-50
-                  self-end
-                  p-2
-                  flex-wrap
-                  absolute
-                text-white
-                  font-epi
-                  text-2xl
-                  font-bold"
+              className="
+              z-50
+              p-2
+              flex-wrap
+              absolute
+            text-white
+              font-epi
+              text-2xl
+              font-bold
+              "
             >
               {handleName}
             </p>
@@ -53,14 +55,28 @@ class Card extends Component {
               width="308.53px"
               height="38.93px"
             />
-            <img
-              alt={ cardName }
-              data-testid="image-card"
-              src={ cardImage === '' ? defaultImage : cardImage }
-              height="270.57px"
-              width="308.53px"
-              className="card-image"
-            />
+            <section className="flex flex-col space-y-40 ">
+              <img
+                alt={ cardName }
+                data-testid="image-card"
+                src={ cardImage === '' ? defaultImage : cardImage }
+                height="270.57px"
+                width="308.53px"
+                className="object-fill min-h-64 min-w-76"
+              />
+              { cardTrunfo
+              && (
+                <img
+                  data-testid="trunfo-card"
+                  src={ superTrunfo }
+                  alt="super trunfo logo"
+                  className="absolute self-end"
+                  height="69.49px"
+                  width="116.04px"
+                />
+              ) }
+
+            </section>
           </section>
           <section className="flex flex-col items-center">
             <section>

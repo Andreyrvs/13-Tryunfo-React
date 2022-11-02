@@ -53,5 +53,5 @@
 }
 
 .attr-text {
-  @apply z-40 text-white font-epi font-semibold text-base ;
+  @apply z-40 text-white font-epi font-semibold text-base w-10 ;
 }

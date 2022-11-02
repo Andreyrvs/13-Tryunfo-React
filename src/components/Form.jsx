@@ -8,8 +8,6 @@ import TextArea from './TextArea/TextArea';
 import Label from './Label';
 import imageLink from '../assets/imageLink.svg';
 
-import './Form.css';
-
 class Form extends Component {
   render() {
     const {
@@ -26,6 +24,8 @@ class Form extends Component {
       onInputChange,
       onSaveButtonClick,
     } = this.props;
+    const MAXIMUM_POINTS = 150;
+    const handleTotalPoints = Number(cardAttr1) + Number(cardAttr2) + Number(cardAttr3);
 
     return (
       <div
@@ -49,6 +49,7 @@ class Form extends Component {
               name="cardName"
               type="text"
               value={ cardName }
+              placeholder="Melhor nome..."
             />
           </section>
           <section className="flex flex-col">
@@ -110,6 +111,7 @@ class Form extends Component {
               id="input-image"
               name="cardImage"
               value={ cardImage }
+              placeholder="https://minha-imagem.jpg"
             />
             <img
               className="-ml-14"
@@ -130,6 +132,23 @@ class Form extends Component {
               name="cardRare"
               value={ cardRare }
             />
+            <section className="flex justify-center text-format">
+              { handleTotalPoints > MAXIMUM_POINTS
+                ? (
+                  <span className="text-red-500">
+                    Total de Pontos =
+                    {' '}
+                    {handleTotalPoints}
+                  </span>
+                )
+                : (
+                  <span>
+                    Total de Pontos =
+                    {' '}
+                    {handleTotalPoints}
+                  </span>
+                )}
+            </section>
           </section>
           <section className="flex flex-row space-x-16 justify-start items-center ">
 
@@ -148,6 +167,7 @@ class Form extends Component {
               )}
             <Button
               datatest="save-button"
+              isGreen="true"
               onSaveButtonClick={ onSaveButtonClick }
               id="button-save"
               name="isSaveButtonDisabled"

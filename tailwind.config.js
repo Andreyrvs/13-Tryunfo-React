@@ -4,6 +4,11 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      boxShadow: {
+        32: 'var(--shadow)',
+        777: 'var(--shadow-top)',
+        up: 'var(--shadow-up)',
+      },
       inset: {
         '-349': '-21.813rem',
         '-365': '-22.813rem',
@@ -16,7 +21,10 @@ module.exports = {
         primary: '#023031',
         'secondary-green': 'var(--bg-secondary)',
         primarText: 'var(--bg-primary)',
-        secondText: '#3D495C',
+        secondText: '#3d495c',
+        grayPrimary: '#f0f2f5',
+        primaryRed: 'var(--bg-red)',
+        secondRed: 'var(--bg-red-s)',
       },
       spacing: {
         159: '9.938rem',
@@ -35,15 +43,17 @@ module.exports = {
       fontSize: {
         '34xl': '1.75rem',
       },
-      backgroundColor: ['checked'],
-      borderColor: ['checked'],
     },
     screens: {
       desktopfront: '1440px',
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      backgroundColor: ['checked'],
+      borderColor: ['checked'],
+      animation: ['motion-safe'],
+    },
   },
   plugins: [],
 };

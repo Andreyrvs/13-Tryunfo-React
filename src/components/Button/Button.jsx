@@ -3,18 +3,23 @@ import PropTypes from 'prop-types';
 
 class Button extends Component {
   render() {
-    const { datatest, value, onSaveButtonClick, type, text } = this.props;
+    const { datatest, value, onSaveButtonClick, type, text, isGreen } = this.props;
+    const presetRed = 'hover:bg-secondRed focus:ring-red-500 bg-primaryRed';
+    const presetGreen = 'hover:bg-green-600 focus:ring-green-500 bg-primarText';
+    const handleColor = isGreen ? presetGreen : presetRed;
     return (
       <button
-        className="bg-primarText
+        className={ `
+          bg-primarText
           w-28
           h-10
           rounded-sm
-          hover:bg-green-700
           focus:outline-none
           focus:ring-2
-          focus:ring-green-600
-          focus:ring-opacity-50"
+          focus:ring-offset-2
+          focus:ring-opacity-50
+          ${handleColor}
+          ` }
         data-testid={ datatest }
         disabled={ value }
         onClick={ onSaveButtonClick }
@@ -33,6 +38,7 @@ Button.propTypes = {
   value: PropTypes.bool,
   onSaveButtonClick: PropTypes.func,
   type: PropTypes.string,
+  isGreen: PropTypes.bool,
 }.isRequired;
 
 export default Button;

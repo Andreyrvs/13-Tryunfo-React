@@ -41,6 +41,7 @@ module.exports = {
       },
       backgroundColor: ['checked'],
       borderColor: ['checked'],
+      animation: ['motion-safe'],
     },
     screens: {
       desktopfront: '1440px',

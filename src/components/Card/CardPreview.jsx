@@ -18,7 +18,7 @@ export default class CardPreview extends Component {
           <span>
             {attrFormated('01')}
           </span>
-          <section className="flex flex-row gap-2">
+          <section className="flex flex-row gap-2 text-center">
             <p
               data-testid="attr2-card"
               className="attr-text"
@@ -32,7 +32,7 @@ export default class CardPreview extends Component {
           <span>
             {attrFormated('02')}
           </span>
-          <section className="flex flex-row gap-2">
+          <section className="flex flex-row gap-2 text-center">
             <p
               data-testid="attr2-card"
               className="attr-text "
@@ -46,7 +46,7 @@ export default class CardPreview extends Component {
           <span>
             {attrFormated('03')}
           </span>
-          <section className="flex flex-row gap-2">
+          <section className="flex flex-row gap-2 text-center">
             <p
               data-testid="attr2-card"
               className="attr-text"

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Form from './components/Form';
-import Card from './components/Card';
+import Card from './components/Card/Card';
 import './App.css';
 import Button from './components/Button/Button';
 import logo from './assets/logo_tryunfo.svg';
@@ -190,16 +190,21 @@ class App extends Component {
             onSaveButtonClick={ this.onSaveButtonClick }
             hasTrunfo={ hasTrunfo }
           />
-          <Card
-            cardAttr1={ cardAttr1 }
-            cardAttr2={ cardAttr2 }
-            cardAttr3={ cardAttr3 }
-            cardDescription={ cardDescription }
-            cardImage={ cardImage }
-            cardName={ cardName }
-            cardRare={ cardRare }
-            cardTrunfo={ cardTrunfo }
-          />
+          <div
+            className="gap-10 flex flex-col mt-10 items-center"
+          >
+            <h1 className="h1-card">Pre Visualização</h1>
+            <Card
+              cardAttr1={ cardAttr1 }
+              cardAttr2={ cardAttr2 }
+              cardAttr3={ cardAttr3 }
+              cardDescription={ cardDescription }
+              cardImage={ cardImage }
+              cardName={ cardName }
+              cardRare={ cardRare }
+              cardTrunfo={ cardTrunfo }
+            />
+          </div>
         </section>
         <div
           className="

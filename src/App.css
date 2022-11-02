@@ -13,7 +13,7 @@
 }
 
 .card-format {
-  @apply flex flex-col justify-start items-center w-404 h-card mt-10 ;
+  @apply flex flex-col justify-center items-center ;
 }
 
 .bg-brilho-top {
@@ -46,4 +46,12 @@
 
 .input-section {
   @apply flex items-center space-x-8 ;
+}
+
+.attr {
+  @apply flex flex-row bg-grayPrimary rounded-lg  h-7 ;
+}
+
+.attr-text {
+  @apply z-40 text-white font-epi font-semibold text-base ;
 }

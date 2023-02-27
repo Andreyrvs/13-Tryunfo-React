@@ -35,7 +35,7 @@ Neste projeto, verificamos se você é capaz de:
 
 ## Preview da Aplicação
 
-| ![Tryunfo](./print-tryunfo-01.png) | ![css](./print-02.png) |
+| ![Tryunfo](./aplicacao-home.png) | ![css](./print-02.png) |
 | ----------- | ----------- |
 
 

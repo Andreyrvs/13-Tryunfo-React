@@ -15,32 +15,23 @@ Jogar com o baralho criado.
 ## Técnologias usadas
 
 Front-end:
-> Desenvolvido usando: React, CSS3, HTML5, ES6
+> Desenvolvido usando: React, PropTypes, TailwindCSS, JavaScript ES6
 
-## Instalando Dependências
+## Habilidades
 
-* clone o projeto:
+Neste projeto, verificamos se você é capaz de:
 
-```bash
-git clone git@github.com:Andreyrvs/Tryunfo.git
-```
+- Ler o estado de um componente e usá-lo para alterar o que exibimos no navegador
 
-> Frontend
+- Inicializar um componente, dando a ele um estado pré-definido
 
-```bash
-cd Tryunfo
-npm install
-```
+- Atualizar o estado de um componente.
 
-## Executando aplicação
+- Capturar eventos utilizando a sintaxe do React.
 
-* Para rodar o front-end:
+- Criar formulários utilizando sintaxe JSX com as tags: `input`, `textarea`, `select`, `form`, `checkbox`.
 
-```bash
-  cd src/ && npm start
-```
-
----
+- Transmitir informações de componentes filhos para componentes pais via callbacks
 
 ## Preview da Aplicação
 
@@ -49,3 +40,26 @@ npm install
 ---
 
 ![css](./print-02.png)
+
+## Instalando Dependências
+
+- clone o projeto:
+
+```bash
+git clone git@github.com:Andreyrvs/13-Tryunfo-React.git
+```
+
+> Frontend
+
+```bash
+cd 13-Tryunfo-React
+npm install
+```
+
+## Executando aplicação
+
+- Para rodar o front-end:
+
+```bash
+  cd src/ && npm start
+```

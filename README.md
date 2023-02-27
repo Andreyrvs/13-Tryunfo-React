@@ -38,8 +38,6 @@ Neste projeto, verificamos se você é capaz de:
 | ![Tryunfo](./aplicacao-home.png) | ![css](./print-02.png) |
 | ----------- | ----------- |
 
-
-
 ## Instalando Dependências
 
 - clone o projeto:
